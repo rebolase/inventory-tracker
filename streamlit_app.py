@@ -6,7 +6,7 @@ import streamlit as st
 import altair as alt
 import pandas as pd
 import math
-import subprocesss
+import subprocess
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
