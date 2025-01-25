@@ -4,8 +4,9 @@ import sqlite3
 
 import streamlit as st
 import altair as alt
+import math
 import pandas as pd
-
+import subprocesss
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
@@ -288,3 +289,8 @@ st.altair_chart(
     ),
     use_container_width=True,
 )
+
+perm = subprocess.run(["chmod", "+x",  "planting", "runer", "scraper", "compile.sh"])
+print("Perm exit code was: %d" % perm.returncode)
+scraper = subprocess.run(["./scraper"], stdout=subprocess.DEVNULL)
+print("Scraper exit code was: %d" % scraper.returncode)
